@@ -26,14 +26,15 @@ class CharactersFragment : Fragment() {
         viewModel.charactersString.observe(viewLifecycleOwner, Observer { charactersString ->
             binding.charactersString.text = charactersString
         })
-        addCharacters()
-        val view = binding.root
 
+        addCharacters()
+
+        val view = binding.root
         return view
     }
 
     private fun addCharacters() {
-        val characters = viewModel.getCharactersString()
+       viewModel.getCharactersString()
     }
 
 
